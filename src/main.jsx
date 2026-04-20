@@ -1,4 +1,4 @@
-import { StrictMode, Suspense } from 'react'
+import { StrictMode, Suspense, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 
@@ -8,14 +8,18 @@ import ProfileDetails from './Comoments/PageLayout/ProfileDetailsPage/ProfileDet
 import Root from './Comoments/Root/Root';
 import HomePage from './Comoments/PageLayout/HomePage';
 const friendsDatas =fetch('/public/friends.json').then(res => res.json());
+// console.log(detailsData)
+// const [detailsData, setDetailsData]=useState([]) ;
 const router = createBrowserRouter([
+  
   {
+    
     path: "/",
     element:
       <Root friendsDatas={friendsDatas}></Root>,
     children:[
       {index:true,element:<HomePage friendsDatas={friendsDatas}></HomePage>},
-      {path:'profileDetals',Component:ProfileDetails}
+      {path:'profileDetals',element:<ProfileDetails  ></ProfileDetails>}
     ]
   },
 ]);

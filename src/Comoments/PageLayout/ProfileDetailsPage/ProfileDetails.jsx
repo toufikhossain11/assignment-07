@@ -1,6 +1,8 @@
-import React from 'react';
+// import React, { useState } from 'react';
 
-const ProfileDetails = () => {
+const ProfileDetails = ({detailsData}) => {
+    console.log(detailsData)
+    
     return (
         <div>
             <div className="flex justify-center px-4 py-10">
