@@ -7,9 +7,7 @@ const Navbar = () => {
         <div className="flex-1 font-bold text-xl">KeenKeeper</div>
         <div className="flex gap-2">
           <NavLink to={'/'} className={({ isActive }) => (isActive ? "btn btn-sm btn-success" : "btn btn-sm")}>Home</NavLink>
-          {/* <button className="btn btn-sm btn-success">Home</button> */}
-          <NavLink to={''} className={({ isActive }) => (isActive ? "btn btn-sm btn-success" : "btn btn-sm")}>Timeline</NavLink>
-          {/* <button  className="btn btn-sm">Timeline</button> */}
+          <NavLink to={'/timelinepage'} className={({ isActive }) => (isActive ? "btn btn-sm btn-success" : "btn btn-sm")}>Timeline</NavLink>
           <NavLink className={({ isActive }) => (isActive ? "btn btn-sm btn-success" : "btn btn-sm")}>Life Stats</NavLink>
         </div>
       </div>

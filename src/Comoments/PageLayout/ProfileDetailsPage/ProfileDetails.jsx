@@ -55,21 +55,21 @@ const ProfileDetails = ({friendsDatas}) => {
                         
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                             <div className="card bg-base-100 p-4 text-center shadow">
-                                <h2 className="text-2xl font-bold">{details.days_since_contact}</h2>
+                                <h2 className="text-2xl font-bold text-[#244D3F]">{details.days_since_contact}</h2>
                                 <p className="text-sm text-gray-500">
                                     Days Since Contact
                                 </p>
                             </div>
 
                             <div className="card bg-base-100 p-4 text-center shadow">
-                                <h2 className="text-2xl font-bold">{details.goal}</h2>
+                                <h2 className="text-2xl font-bold text-[#244D3F]">{details.goal}</h2>
                                 <p className="text-sm text-gray-500">
                                     Goal (Days)
                                 </p>
                             </div>
 
                             <div className="card bg-base-100 p-4 text-center shadow">
-                                <h2 className="text-xl font-bold">{details.next_due_date}</h2>
+                                <h2 className="text-xl font-bold text-[#244D3F]">{details.next_due_date}</h2>
                                 <p className="text-sm text-gray-500">
                                     Next Due
                                 </p>
@@ -77,7 +77,7 @@ const ProfileDetails = ({friendsDatas}) => {
                         </div>
                         <div className="card bg-base-100 shadow p-5">
                             <div className="flex justify-between items-center">
-                                <h3 className="font-bold">Relationship Goal</h3>
+                                <h3 className="font-bold text-[#244D3F]">Relationship Goal</h3>
                                 <button className="btn btn-xs">Edit</button>
                             </div>
                             <p className="text-gray-500 mt-2">
@@ -86,7 +86,7 @@ const ProfileDetails = ({friendsDatas}) => {
                         </div>
 
                         <div className="card bg-base-100 shadow p-5">
-                            <h3 className="font-semibold mb-4">Quick Check-In</h3>
+                            <h3 className="font-bold text-[#244D3F] mb-4">Quick Check-In</h3>
 
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 <button className="btn card bg-base-100 p-4 text-center shadow flex flex-col h-20">
