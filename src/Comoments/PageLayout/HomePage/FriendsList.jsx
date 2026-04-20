@@ -1,14 +1,11 @@
 import React from 'react';
-
-const cardHolder = (data) => {
-    console.log(data)
-}
+import { Link } from 'react-router';
 
 const FriendsList = ({ data }) => {
     // console.log(data)
 
     return (
-        <div onClick={()=>cardHolder(data)} className="grid justify-center  ">
+        <Link to={`/${data.id}`}className="grid justify-center  ">
             <div className="rounded-2xl bg-base-100 shadow p-4 text-center  w-53 cursor-pointer">
                 <img
                     src="https://i.pravatar.cc/100?img=1"
@@ -25,7 +22,7 @@ const FriendsList = ({ data }) => {
             </div>
 
 
-        </div>
+        </Link>
     );
 };
 

@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="flex gap-2">
           <NavLink to={'/'} className={({ isActive }) => (isActive ? "btn btn-sm btn-success" : "btn btn-sm")}>Home</NavLink>
           {/* <button className="btn btn-sm btn-success">Home</button> */}
-          <NavLink to={'/profileDetals'} className={({ isActive }) => (isActive ? "btn btn-sm btn-success" : "btn btn-sm")}>Timeline</NavLink>
+          <NavLink to={''} className={({ isActive }) => (isActive ? "btn btn-sm btn-success" : "btn btn-sm")}>Timeline</NavLink>
           {/* <button  className="btn btn-sm">Timeline</button> */}
           <NavLink className={({ isActive }) => (isActive ? "btn btn-sm btn-success" : "btn btn-sm")}>Life Stats</NavLink>
         </div>
