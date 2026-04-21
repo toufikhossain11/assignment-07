@@ -1,7 +1,8 @@
 // import React, { useState } from 'react';
 
-import { use } from "react";
+import { use, useContext } from "react";
 import { useParams } from "react-router";
+import { TimeLineContext } from "../../../context/TimelineContext";
 
 const ProfileDetails = ({friendsDatas}) => {
     const data = use(friendsDatas);
@@ -9,14 +10,19 @@ const ProfileDetails = ({friendsDatas}) => {
     const {id}= useParams();
     const details = data.find((d)=>d.id==id);
 
-    console.log(details)
+    const {timeLineData,setTimeLineData}=useContext(TimeLineContext)
+
+    const handelcallbtn = ()=>{
+        setTimeLineData([...timeLineData,details])
+    }
+    
+    
     
     return (
         <div>
             <div className="flex justify-center px-4 py-10">
                 <div className="w-full max-w-5xl grid md:grid-cols-3 gap-6">
 
-                    {/* Left Profile Card */}
                     <div className="card bg-base-100 shadow p-6 text-center">
                         <img
                             src="https://i.pravatar.cc/100?img=5"
@@ -89,7 +95,7 @@ const ProfileDetails = ({friendsDatas}) => {
                             <h3 className="font-bold text-[#244D3F] mb-4">Quick Check-In</h3>
 
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                                <button className="btn card bg-base-100 p-4 text-center shadow flex flex-col h-20">
+                                <button onClick={()=>handelcallbtn(details)} className="btn card bg-base-100 p-4 text-center shadow flex flex-col h-20">
                                     📞
                                     <span>Call</span>
                                 </button>

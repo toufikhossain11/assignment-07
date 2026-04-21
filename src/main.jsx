@@ -8,6 +8,7 @@ import ProfileDetails from './Comoments/PageLayout/ProfileDetailsPage/ProfileDet
 import Root from './Comoments/Root/Root';
 import HomePage from './Comoments/PageLayout/HomePage';
 import TimelinePage from './Comoments/PageLayout/TimelinePage/TimelinePage';
+import TimelineProvider from './context/TimelineProvider';
 const friendsDatas =fetch('/public/friends.json').then(res => res.json());
 
 const router = createBrowserRouter([
@@ -26,6 +27,8 @@ const router = createBrowserRouter([
 ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />,
+    <TimelineProvider>
+      <RouterProvider router={router} />
+    </TimelineProvider>
   </StrictMode>,
 )
