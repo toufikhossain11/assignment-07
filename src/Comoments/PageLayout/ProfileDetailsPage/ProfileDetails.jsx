@@ -15,6 +15,18 @@ const ProfileDetails = ({friendsDatas}) => {
     const handelcallbtn = ()=>{
         setTimeLineData([...timeLineData,details])
     }
+
+    const {textData , setTextData}=useContext(TimeLineContext)
+
+    const handeltextbtn = ()=>{
+        setTextData([...textData,details])
+    }
+
+    const {videoData , setVideoData}=useContext(TimeLineContext);
+
+    const handelvideobtn=()=>{
+        setVideoData([...videoData,details])
+    }
     
     
     
@@ -100,12 +112,12 @@ const ProfileDetails = ({friendsDatas}) => {
                                     <span>Call</span>
                                 </button>
 
-                                <button className="btn card bg-base-100 p-4 text-center shadow flex flex-col h-20">
+                                <button onClick={()=>handeltextbtn(details)} className="btn card bg-base-100 p-4 text-center shadow flex flex-col h-20">
                                     💬
                                     <span>Text</span>
                                 </button>
 
-                                <button className="btn card bg-base-100 p-4 text-center shadow flex flex-col h-20">
+                                <button onClick={()=>handelvideobtn(details)} className="btn card bg-base-100 p-4 text-center shadow flex flex-col h-20">
                                     🎥
                                     <span>Video</span>
                                 </button>

@@ -2,9 +2,16 @@ import React, { useState } from 'react';
 import { TimeLineContext } from './TimelineContext';
 
 const TimelineProvider = ({children}) => {
-    const [timeLineData, setTimeLineData]=useState([])
+    const [timeLineData, setTimeLineData]=useState([]);
+    const [textData , setTextData]=useState([]);
+    const [videoData , setVideoData]=useState([]);
         const data ={
-            timeLineData, setTimeLineData
+            timeLineData,
+            setTimeLineData,
+            textData ,
+            setTextData,
+            videoData ,
+            setVideoData
         }
 
 
