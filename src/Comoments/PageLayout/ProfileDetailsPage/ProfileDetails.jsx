@@ -37,7 +37,7 @@ const ProfileDetails = ({friendsDatas}) => {
 
                     <div className="card bg-base-100 shadow p-6 text-center">
                         <img
-                            src="https://i.pravatar.cc/100?img=5"
+                            src={details.picture}
                             className="w-20 h-20 rounded-full mx-auto"
                         />
                         <h3 className="font-semibold text-lg mt-2"> {details.name}</h3>

@@ -6,9 +6,9 @@ const FriendsList = ({ data }) => {
 
     return (
         <Link to={`/${data.id}`}className="grid justify-center  ">
-            <div className="rounded-2xl bg-base-100 shadow p-4 text-center  w-53 cursor-pointer">
+            <div className="rounded-2xl bg-base-100 shadow p-4 text-center  w-53 lg:w-58 cursor-pointer">
                 <img
-                    src="https://i.pravatar.cc/100?img=1"
+                    src={data.picture}
                     className="w-16 h-16 rounded-full mx-auto"
                 />
                 <h3 className="font-semibold mt-2">{data.name}</h3>

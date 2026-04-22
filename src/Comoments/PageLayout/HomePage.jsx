@@ -9,7 +9,7 @@ const HomePage = ({friendsDatas}) => {
     return (
         <div className='p-11'>
             <HomeTitle></HomeTitle>
-            <FriendsCount/>
+            <FriendsCount datas={datas}/>
             <h2 className='font-bold text-2xl py-7 pl-5'>Friend List</h2>
             <div className="grid grid-cols-2 lg:grid-cols-5 gap-x-7 gap-y-5 justify-center mx-auto">
                 {
