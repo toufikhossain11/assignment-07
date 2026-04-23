@@ -1,16 +1,107 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🌟 KeenKeeper - Friendship Management App
 
-Currently, two official plugins are available:
+## 📌 Project Description
+KeenKeeper is a modern friendship management web application that helps users track, maintain, and nurture meaningful relationships. Users can monitor interactions, set goals, and view analytics of their communication history.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Live Demo
+🔗 Live Link: [Add your deployed link here]
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 💻 GitHub Repository
+🔗 Repo Link: [Add your GitHub repo link here]
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Technologies Used
+
+- ⚛️ React.js
+- 🎨 Tailwind CSS + DaisyUI
+- 🧭 React (Manual Routing / Without Router)
+- 📊 Recharts (for analytics chart)
+- 🔔 React Toastify (for notifications)
+- 📁 JSON (for friend data)
+
+---
+
+## ✨ Key Features
+
+### 👥 Friend Management
+- View all friends in a responsive grid layout
+- Each friend card shows:
+  - Profile picture
+  - Name
+  - Days since last contact
+  - Tags
+  - Status (with dynamic color)
+
+---
+
+### 📄 Friend Details Page
+- Two-column layout
+- Left side:
+  - Profile info (image, name, bio, email, tags)
+  - Action buttons (Snooze, Archive, Delete)
+- Right side:
+  - Stats cards (Days, Goal, Next Due Date)
+  - Relationship goal section
+  - Quick check-in buttons (Call, Text, Video)
+
+---
+
+### ⚡ Timeline System
+- Automatically logs interactions when:
+  - 📞 Call
+  - 💬 Text
+  - 🎥 Video
+- Shows:
+  - Date
+  - Icon
+  - Interaction title
+- Includes filter option (Call / Text / Video)
+
+---
+
+### 📊 Friendship Analytics
+- Pie chart visualization of interactions
+- Shows count of:
+  - Call
+  - Text
+  - Video
+
+---
+
+### 🎯 UI Features
+- Fully responsive design (Mobile, Tablet, Desktop)
+- Clean modern UI based on Figma
+- Active navbar highlight
+- Icons included in navigation
+
+---
+
+### 🔔 Extra Features
+- Toast notification on interaction click
+- Loading spinner while fetching data
+- Custom 404 page for invalid routes
+- No error on page reload after deployment
+
+---
+
+## 📁 Data Structure (Example)
+
+```json
+{
+  "id": 1,
+  "name": "John Doe",
+  "picture": "https://example.com/photo.jpg",
+  "email": "john@example.com",
+  "days_since_contact": 12,
+  "status": "overdue",
+  "tags": ["college", "close friend"],
+  "bio": "Met in university. Love hiking together.",
+  "goal": 14,
+  "next_due_date": "2025-07-20"
+}
