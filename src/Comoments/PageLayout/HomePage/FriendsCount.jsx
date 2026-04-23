@@ -1,7 +1,6 @@
 import React from 'react';
 
 const FriendsCount = ({datas}) => {
-    console.log(datas)
     return (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-6">
             <div className="card bg-base-100 p-4 text-center shadow">

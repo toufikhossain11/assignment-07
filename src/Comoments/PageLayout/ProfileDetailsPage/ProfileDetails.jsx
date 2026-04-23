@@ -3,33 +3,49 @@
 import { use, useContext } from "react";
 import { useParams } from "react-router";
 import { TimeLineContext } from "../../../context/TimelineContext";
+import { Bounce, toast } from "react-toastify";
 
-const ProfileDetails = ({friendsDatas}) => {
+const ProfileDetails = ({ friendsDatas }) => {
     const data = use(friendsDatas);
 
-    const {id}= useParams();
-    const details = data.find((d)=>d.id==id);
+    const { id } = useParams();
+    const details = data.find((d) => d.id == id);
 
-    const {timeLineData,setTimeLineData}=useContext(TimeLineContext)
+    const { timeLineData, setTimeLineData } = useContext(TimeLineContext)
 
-    const handelcallbtn = ()=>{
-        setTimeLineData([...timeLineData,details])
+    const handelcallbtn = () => {
+        setTimeLineData([...timeLineData, details])
+        toast.success(`Call with ${details.name}` , {
+            position: "top-center",
+            autoClose: 5000,
+            transition: Bounce,
+        });
     }
 
-    const {textData , setTextData}=useContext(TimeLineContext)
+    const { textData, setTextData } = useContext(TimeLineContext)
 
-    const handeltextbtn = ()=>{
-        setTextData([...textData,details])
+    const handeltextbtn = () => {
+        setTextData([...textData, details]);
+        toast.success(`Text with ${details.name}` , {
+            position: "top-center",
+            autoClose: 5000,
+            transition: Bounce,
+        });
     }
 
-    const {videoData , setVideoData}=useContext(TimeLineContext);
+    const { videoData, setVideoData } = useContext(TimeLineContext);
 
-    const handelvideobtn=()=>{
-        setVideoData([...videoData,details])
+    const handelvideobtn = () => {
+        setVideoData([...videoData, details]);
+       toast.success(`Video with ${details.name}` , {
+            position: "top-center",
+            autoClose: 5000,
+            transition: Bounce,
+        });
     }
-    
-    
-    
+
+
+
     return (
         <div>
             <div className="flex justify-center px-4 py-10">
@@ -67,10 +83,10 @@ const ProfileDetails = ({friendsDatas}) => {
                         </div>
                     </div>
 
-                   
+
                     <div className="md:col-span-2 space-y-6">
 
-                        
+
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                             <div className="card bg-base-100 p-4 text-center shadow">
                                 <h2 className="text-2xl font-bold text-[#244D3F]">{details.days_since_contact}</h2>
@@ -107,17 +123,17 @@ const ProfileDetails = ({friendsDatas}) => {
                             <h3 className="font-bold text-[#244D3F] mb-4">Quick Check-In</h3>
 
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                                <button onClick={()=>handelcallbtn(details)} className="btn card bg-base-100 p-4 text-center shadow flex flex-col h-20">
+                                <button onClick={() => handelcallbtn(details)} className="btn card bg-base-100 p-4 text-center shadow flex flex-col h-20">
                                     📞
                                     <span>Call</span>
                                 </button>
 
-                                <button onClick={()=>handeltextbtn(details)} className="btn card bg-base-100 p-4 text-center shadow flex flex-col h-20">
+                                <button onClick={() => handeltextbtn(details)} className="btn card bg-base-100 p-4 text-center shadow flex flex-col h-20">
                                     💬
                                     <span>Text</span>
                                 </button>
 
-                                <button onClick={()=>handelvideobtn(details)} className="btn card bg-base-100 p-4 text-center shadow flex flex-col h-20">
+                                <button onClick={() => handelvideobtn(details)} className="btn card bg-base-100 p-4 text-center shadow flex flex-col h-20">
                                     🎥
                                     <span>Video</span>
                                 </button>

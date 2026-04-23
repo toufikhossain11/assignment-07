@@ -5,7 +5,7 @@ const FriendsList = ({ data }) => {
     // console.log(data)
 
     return (
-        <Link to={`/${data.id}`}className="grid justify-center  ">
+        <Link to={`/${data.id}`} className="grid justify-center  ">
             <div className="rounded-2xl bg-base-100 shadow p-4 text-center  w-53 lg:w-58 cursor-pointer">
                 <img
                     src={data.picture}
@@ -18,7 +18,12 @@ const FriendsList = ({ data }) => {
 
                     <div className=" rounded-2xl bg-[#FEF3C6] mt-2 px-3  text-[#BB4D00]">{data.tags[1]}</div>
                 </div>
-                <div className=" rounded-2xl bg-[#EF4444] mt-2 px-2 w-25 mx-auto text-[#FFFFFF]">{data.status}</div>
+                <div
+                    className={`rounded-2xl mt-2 px-2 w-25 mx-auto text-white ${data.status === "on-track"? "bg-[#244D3F]": data.status === "overdue"? "bg-[#EF4444]": data.status === "almost due"? "bg-[#EFAD44]": "bg-gray-400"
+                        }`}
+                >
+                    {data.status}
+                </div>
             </div>
 
 

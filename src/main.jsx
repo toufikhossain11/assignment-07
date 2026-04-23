@@ -10,6 +10,7 @@ import HomePage from './Comoments/PageLayout/HomePage';
 import TimelinePage from './Comoments/PageLayout/TimelinePage/TimelinePage';
 import TimelineProvider from './context/TimelineProvider';
 import StatsPage from './Comoments/PageLayout/StatsPage/StatsPage';
+import NotFound from './Comoments/PageLayout/NotFound';
 const friendsDatas =fetch('/public/friends.json').then(res => res.json());
 
 const router = createBrowserRouter([
@@ -24,7 +25,8 @@ const router = createBrowserRouter([
       {path:'/:id',element:<ProfileDetails friendsDatas={friendsDatas} ></ProfileDetails>},
       {path:'timelinepage',element:<TimelinePage></TimelinePage>},
       {path:'statspage',element:<StatsPage></StatsPage>}
-    ]
+    ],
+    errorElement:<NotFound></NotFound>
   },
 ]);
 createRoot(document.getElementById('root')).render(
