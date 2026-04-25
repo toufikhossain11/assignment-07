@@ -11,7 +11,7 @@ import TimelinePage from './Comoments/PageLayout/TimelinePage/TimelinePage';
 import TimelineProvider from './context/TimelineProvider';
 import StatsPage from './Comoments/PageLayout/StatsPage/StatsPage';
 import NotFound from './Comoments/PageLayout/NotFound';
-const friendsDatas =fetch('/public/friends.json').then(res => res.json());
+const friendsDatas =fetch('./friends.json').then(res => res.json());
 
 const router = createBrowserRouter([
   
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     
     path: "/",
     element:
-      <Root friendsDatas={friendsDatas}></Root>,
+      <Root></Root>,
     children:[
       {index:true,element:<Suspense fallback={<span className="loading loading-spinner loading-xl flex justify-center items-center"></span>}><HomePage friendsDatas={friendsDatas}></HomePage></Suspense>},
       {path:'/:id',element:<Suspense fallback={<span className="loading loading-spinner loading-xl text-center"></span>}><ProfileDetails friendsDatas={friendsDatas} ></ProfileDetails></Suspense>},
