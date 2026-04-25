@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     element:
       <Root friendsDatas={friendsDatas}></Root>,
     children:[
-      {index:true,element:<HomePage friendsDatas={friendsDatas}></HomePage>},
+      {index:true,element:<Suspense fallback={<span className="loading loading-spinner loading-xl flex justify-center items-center"></span>}><HomePage friendsDatas={friendsDatas}></HomePage></Suspense>},
       {path:'/:id',element:<Suspense fallback={<span className="loading loading-spinner loading-xl text-center"></span>}><ProfileDetails friendsDatas={friendsDatas} ></ProfileDetails></Suspense>},
       {path:'timelinepage',element:<TimelinePage></TimelinePage>},
       {path:'statspage',element:<StatsPage></StatsPage>}

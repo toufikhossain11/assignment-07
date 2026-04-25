@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 export default function NotFound() {
 
   return (
@@ -13,12 +13,12 @@ export default function NotFound() {
         <p className="text-gray-500 mt-2">
           Oops!, the page you looking for does not exist
         </p>
-        <NavLink
+        <Link
           to={"/"}
           className="mt-6 px-6 py-3 rounded-full bg-orange-400 hover:bg-orange-500 text-black font-medium flex items-center gap-2 mx-auto"
         >
           ←  Back to home
-        </NavLink>
+        </Link>
 
       </div>
 
