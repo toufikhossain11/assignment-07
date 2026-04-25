@@ -7,12 +7,12 @@ KeenKeeper is a modern friendship management web application that helps users tr
 ---
 
 ## 🚀 Live Demo
-🔗 Live Link: [Add your deployed link here]
+🔗 Live Link: https://assinment-07-keen-keper.netlify.app/
 
 ---
 
 ## 💻 GitHub Repository
-🔗 Repo Link: [Add your GitHub repo link here]
+🔗 Repo Link: https://github.com/toufikhossain11/assignment-07
 
 ---
 
